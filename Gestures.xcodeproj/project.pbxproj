@@ -14,6 +14,7 @@
 		FEE7F03F1CD1114A001E25CA /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F03E1CD1114A001E25CA /* TapViewController.swift */; };
 		FEE7F0411CD1139D001E25CA /* TransRotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F0401CD1139D001E25CA /* TransRotateViewController.swift */; };
 		FEE7F0431CD115FB001E25CA /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE7F0421CD115FB001E25CA /* ScaleViewController.swift */; };
+		FEE7F0451CD1DDC4001E25CA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE7F0441CD1DDC4001E25CA /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FEE7F03E1CD1114A001E25CA /* TapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
 		FEE7F0401CD1139D001E25CA /* TransRotateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransRotateViewController.swift; sourceTree = "<group>"; };
 		FEE7F0421CD115FB001E25CA /* ScaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
+		FEE7F0441CD1DDC4001E25CA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				FEE7F0331CD10DA2001E25CA /* Assets.xcassets */,
 				FEE7F0351CD10DA2001E25CA /* LaunchScreen.storyboard */,
 				FEE7F0381CD10DA2001E25CA /* Info.plist */,
+				FEE7F0441CD1DDC4001E25CA /* Storyboard.storyboard */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -97,12 +100,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = sodas;
 				TargetAttributes = {
 					FEE7F0281CD10DA2001E25CA = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = KPFF548763;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE7F0371CD10DA2001E25CA /* LaunchScreen.storyboard in Resources */,
+				FEE7F0451CD1DDC4001E25CA /* Storyboard.storyboard in Resources */,
 				FEE7F0341CD10DA2001E25CA /* Assets.xcassets in Resources */,
 				FEE7F0321CD10DA2001E25CA /* Main.storyboard in Resources */,
 			);
@@ -185,8 +190,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -208,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -231,8 +238,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -248,9 +257,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -267,6 +277,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tw.sodas.Gestures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -281,6 +293,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tw.sodas.Gestures;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -303,6 +317,7 @@
 				FEE7F03D1CD10DA2001E25CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

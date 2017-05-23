@@ -23,17 +23,16 @@ class TransRotateViewController: UIViewController {
 
     @IBOutlet weak var boxView: UIView!
 
-    @IBAction func didRotate(sender: UIRotationGestureRecognizer) {
-        self.boxView.transform = CGAffineTransformRotate(self.boxView.transform, sender.rotation)
+    @IBAction func didRotate(_ sender: UIRotationGestureRecognizer) {
+        self.boxView.transform = self.boxView.transform.rotated(by: sender.rotation)
         sender.rotation = 0
     }
 
-    @IBAction func didPan(sender: UIPanGestureRecognizer) {
-        let translation = sender.translationInView(self.view)
-        //self.boxView.transform = CGAffineTransformTranslate(self.boxView.transform, translation.x, translation.y)
+    @IBAction func didPan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.view)
         self.boxView.center.x += translation.x
         self.boxView.center.y += translation.y
-        sender.setTranslation(CGPointZero, inView: self.view)
+        sender.setTranslation(CGPoint.zero, in: self.view)
     }
 
 }

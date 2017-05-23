@@ -23,8 +23,8 @@ class ScaleViewController: UIViewController {
 
     @IBOutlet weak var boxView: UIView!
 
-    @IBAction func didPinch(sender: UIPinchGestureRecognizer) {
+    @IBAction func didPinch(_ sender: UIPinchGestureRecognizer) {
         // Check documentation of the `scale` property, it's not the same as pan and rotate one
-        self.boxView.transform = CGAffineTransformMakeScale(sender.scale, sender.scale)
+        self.boxView.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
     }
 }

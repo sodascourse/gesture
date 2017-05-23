@@ -25,22 +25,22 @@ class TapViewController: UIViewController {
     @IBOutlet weak var doubleTapOnLabel: UILabel!
     @IBOutlet weak var twoTouchTapOnLabel: UILabel!
 
-    func showLabel(label: UILabel) {
+    func show(label: UILabel) {
         label.alpha = 1.0
-        UIView.animateWithDuration(0.5, delay: 1.0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 1.0, animations: {
             label.alpha = 0.0
-        }, completion: nil)
+        })
     }
 
-    @IBAction func didSingleTap(sender: UITapGestureRecognizer) {
-        self.showLabel(self.singleTapOnLabel)
+    @IBAction func didSingleTap(_ sender: UITapGestureRecognizer) {
+        self.show(label: self.singleTapOnLabel)
     }
 
-    @IBAction func didDoubleTap(sender: UITapGestureRecognizer) {
-        self.showLabel(self.doubleTapOnLabel)
+    @IBAction func didDoubleTap(_ sender: UITapGestureRecognizer) {
+        self.show(label: self.doubleTapOnLabel)
     }
 
-    @IBAction func twoTouchTap(sender: UITapGestureRecognizer) {
-        self.showLabel(self.twoTouchTapOnLabel)
+    @IBAction func twoTouchTap(_ sender: UITapGestureRecognizer) {
+        self.show(label: self.twoTouchTapOnLabel)
     }
 }
